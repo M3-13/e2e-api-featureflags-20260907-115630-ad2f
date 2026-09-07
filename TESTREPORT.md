@@ -1,0 +1,3 @@
+VERDICT: PASS
+
+Der Build (`go build ./...`) und die Testsuite (`go test ./...`) laufen ohne Fehler durch; alle relevanten Testpakete (`internal/api`, `internal/rollout`, `internal/store`) sind grün. Der Server-Smoke startet das Produkt aus `RUN.json`, und `/healthz` antwortet mit HTTP 200. Keine Fehler, Stack-Traces oder abweichendes Laufzeitverhalten im Bericht. Das `[no test files]` betrifft nur das Root-Paket ohne Testdateien; die eigentlichen Handler- und Store-Tests sind vorhanden und erfolgreich.
