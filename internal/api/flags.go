@@ -8,9 +8,6 @@ import (
 	"featureflags/internal/store"
 )
 
-// maxBodyBytes is the maximum accepted request body size for POST /flags.
-const maxBodyBytes = 1 << 20 // 1 MiB
-
 // createFlagRequest is the decoded JSON body of POST /flags.
 // Enabled and RolloutPercent are pointers so that a missing field can be
 // told apart from a zero value.
